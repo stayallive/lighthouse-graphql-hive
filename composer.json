@@ -1,0 +1,58 @@
+{
+    "name": "stayallive/lighthouse-graphql-hive",
+    "type": "library",
+    "description": "Performance monitoring Lighthouse with GraphQL Hive.",
+    "keywords": [
+        "laravel",
+        "lighthouse",
+        "graphql",
+        "performance",
+        "monitoring"
+    ],
+    "homepage": "https://github.com/stayallive/lighthouse-graphql-hive",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Bouma",
+            "email": "alex@bouma.me"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "laravel/framework": "^9.0",
+        "nuwave/lighthouse": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stayallive\\Lighthouse\\GraphQLHive\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stayallive\\Lighthouse\\GraphQLHive\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "3.8.*",
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --stop-on-failure",
+        "test:ci": "vendor/bin/phpunit",
+        "phpcs": "vendor/bin/php-cs-fixer fix",
+        "phpcs:ci": "vendor/bin/php-cs-fixer fix --dry-run --diff"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    }
+}
