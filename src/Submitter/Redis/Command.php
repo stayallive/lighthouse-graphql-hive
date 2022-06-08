@@ -27,7 +27,7 @@ class Command extends LaravelCommand
                 break;
             }
 
-            $payload = $redis->rawCommand('lpop', 'hive:usage', 100);
+            $payload = $redis->rawCommand('lpop', $redis->_prefix('hive:usage'), 100);
 
             if ($payload === false || count($payload) === 0) {
                 break;
