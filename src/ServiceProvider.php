@@ -39,7 +39,7 @@ class ServiceProvider extends LaravelServiceProvider
             });
         }
 
-        $eventsDispatcher->listen(RegisterDirectiveNamespaces::class, static fn () => __NAMESPACE__);
+        $eventsDispatcher->listen(RegisterDirectiveNamespaces::class, static fn () => __NAMESPACE__ . '\\Collector\\GraphQL');
 
         $eventsDispatcher->listen(ManipulateAST::class, static fn (ManipulateAST $event) => self::handleManipulateAST($event));
 

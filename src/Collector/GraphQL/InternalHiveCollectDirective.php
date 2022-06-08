@@ -1,6 +1,6 @@
 <?php
 
-namespace Stayallive\Lighthouse\GraphQLHive\Collector;
+namespace Stayallive\Lighthouse\GraphQLHive\Collector\GraphQL;
 
 use Closure;
 use GraphQL\Type\Definition\ResolveInfo;
@@ -8,6 +8,7 @@ use Nuwave\Lighthouse\Schema\Values\FieldValue;
 use Nuwave\Lighthouse\Schema\Directives\BaseDirective;
 use Nuwave\Lighthouse\Support\Contracts\GraphQLContext;
 use Nuwave\Lighthouse\Support\Contracts\FieldMiddleware;
+use Stayallive\Lighthouse\GraphQLHive\Collector\Collector;
 
 class InternalHiveCollectDirective extends BaseDirective implements FieldMiddleware
 {
