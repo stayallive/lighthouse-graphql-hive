@@ -56,6 +56,8 @@ _Note: On high volumes this might cause issues with many queued jobs being pushe
 
 ### Redis
 
+_Note: This submitter requires Redis server 6.2.0 or newer because of the usage of [`LPOP`](https://redis.io/commands/lpop/) with the count argument._
+
 ```dotenv
 GRAPHQL_HIVE_SUBMITTER=Stayallive\Lighthouse\GraphQLHive\Submitter\Redis\Submitter
 ```
