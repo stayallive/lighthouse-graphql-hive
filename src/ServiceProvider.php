@@ -69,7 +69,7 @@ class ServiceProvider extends LaravelServiceProvider
 
     public static function driver(): string
     {
-        return config('services.graphqlhive.submitter', QueueSubmitter::class);
+        return config('services.graphqlhive.submitter') ?? QueueSubmitter::class;
     }
 
     public static function enabled(): bool
