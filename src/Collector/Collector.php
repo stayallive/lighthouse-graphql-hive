@@ -29,10 +29,15 @@ class Collector
 
     public function handleStartRequest(StartRequest $startRequest): void
     {
-        $client = $startRequest->request->header('graphql-client');
+        $request = $startRequest->request;
 
-        if (!empty($client)) {
-            [$this->clientName, $this->clientVersion] = explode(':', $client . ':');
+        $clientHeader = $request->header('graphql-client');
+
+        if (!empty($clientHeader)) {
+            [$this->clientName, $this->clientVersion] = explode(':', "{$clientHeader}:");
+        } else {
+            $this->clientName    = $request->header('x-graphql-client-name');
+            $this->clientVersion = $request->header('x-graphql-client-version');
         }
     }
 

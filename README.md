@@ -69,6 +69,9 @@ _Note: This submitter requires a configured Redis connection._
 You should only have to install this package to benefit, unless you have disabled package auto discovery, in that case you will need to add the service provider to
 your `config/app.php` manually.
 
+You can optionally add the `graphql-client` header to your requests in the format `name:version` (like: `my-app:1.2.3`) to see client stats in
+the [GraphQL Hive](https://graphql-hive.com/) dashboard. You can also opt to set `x-graphql-client-name` and `x-graphql-client-version` headers instead.
+
 ## Security Vulnerabilities
 
 If you discover a security vulnerability within this package, please send an e-mail to Alex Bouma at `alex+security@bouma.me`. All security vulnerabilities will be swiftly
