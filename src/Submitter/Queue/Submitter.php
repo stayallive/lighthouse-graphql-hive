@@ -19,7 +19,7 @@ class Submitter implements SubmitterInterface
 
     private function dispatchJobs(): void
     {
-        (new Job($this->buffer))
+        dispatch(new Job($this->buffer))
             ->onQueue(config('services.graphqlhive.queue'));
     }
 
