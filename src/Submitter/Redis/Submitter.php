@@ -8,7 +8,7 @@ use Stayallive\Lighthouse\GraphQLHive\Submitter\Submitter as SubmitterInterface;
 class Submitter implements SubmitterInterface
 {
     public function __construct(
-        private RedisManager $redis
+        private RedisManager $redis,
     ) {
     }
 

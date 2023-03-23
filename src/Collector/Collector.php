@@ -23,7 +23,7 @@ class Collector
     private array                    $currentExecutionFields;
 
     public function __construct(
-        private Submitter $submitter
+        private Submitter $submitter,
     ) {
     }
 

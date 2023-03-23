@@ -23,46 +23,73 @@ $config
         'no_superfluous_phpdoc_tags'                       => false,
         'linebreak_after_opening_tag'                      => true,
         'class_attributes_separation'                      => false,
+        'blank_line_between_import_groups'                 => false,
         'not_operator_with_successor_space'                => false,
         'single_trait_insert_per_statement'                => false,
         'nullable_type_declaration_for_default_null_value' => true,
 
-        'concat_space'            => [
+        'concat_space'                => [
             'spacing' => 'one',
         ],
-        'binary_operator_spaces'  => [
-            'operators' => [
-                '|'  => null,
-                '='  => 'align_single_space',
-                '=>' => 'align_single_space',
-            ],
-        ],
-        'array_syntax'            => [
+        'array_syntax'                => [
             'syntax' => 'short',
         ],
-        'ordered_imports'         => [
+        'ordered_imports'             => [
+            'imports_order'  => ['class', 'const', 'function'],
             'sort_algorithm' => 'length',
         ],
-        'cast_spaces'             => [
+        'cast_spaces'                 => [
             'space' => 'none',
         ],
-        'align_multiline_comment' => [
+        'curly_braces_position'       => [
+            'anonymous_classes_opening_brace' => 'next_line_unless_newline_at_signature_end',
+        ],
+        'align_multiline_comment'     => [
             'comment_type' => 'phpdocs_like',
         ],
-        'phpdoc_align'            => [
-            'align' => 'vertical',
+        'global_namespace_import'     => [
+            'import_classes'   => null,
+            'import_constants' => null,
+            'import_functions' => true,
         ],
-        'increment_style'         => [
+        'trailing_comma_in_multiline' => [
+            'elements' => ['arrays', 'arguments', 'parameters', 'match'],
+        ],
+        'phpdoc_align'                => [
+            'align' => 'vertical',
+            'tags'  => [
+                'param',
+                'property',
+                'property-read',
+                'property-write',
+                'return',
+                'throws',
+                'type',
+                'var',
+                'method',
+            ],
+        ],
+        'increment_style'             => [
             'style' => 'post',
         ],
-        'phpdoc_no_alias_tag'     => [
+        'phpdoc_no_alias_tag'         => [
             'replacements' => [
                 'type' => 'var',
                 'link' => 'see',
             ],
         ],
-        'no_extra_blank_lines'    => [
+        'no_extra_blank_lines'        => [
             'tokens' => [],
+        ],
+        'function_declaration'        => [
+            'closure_function_spacing' => 'one',
+        ],
+        'binary_operator_spaces'      => [
+            'operators' => [
+                '|'  => null,
+                '='  => 'align_single_space',
+                '=>' => 'align_single_space',
+            ],
         ],
     ])
     ->setFinder($finder);

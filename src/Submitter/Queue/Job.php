@@ -12,7 +12,7 @@ class Job implements ShouldQueue
     use Queueable;
 
     public function __construct(
-        private array $payload
+        private array $payload,
     ) {
     }
 

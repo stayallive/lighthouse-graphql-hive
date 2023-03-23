@@ -13,7 +13,7 @@ use Stayallive\Lighthouse\GraphQLHive\Collector\Collector;
 class InternalHiveCollectDirective extends BaseDirective implements FieldMiddleware
 {
     public function __construct(
-        private Collector $collector
+        private Collector $collector,
     ) {
     }
 
