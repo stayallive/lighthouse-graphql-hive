@@ -2,7 +2,7 @@
 
 [![Latest Version](https://img.shields.io/github/release/stayallive/lighthouse-graphql-hive.svg?style=flat-square)](https://github.com/stayallive/lighthouse-graphql-hive/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/github/workflow/status/stayallive/lighthouse-graphql-hive/CI/master.svg?style=flat-square)](https://github.com/stayallive/lighthouse-graphql-hive/actions/workflows/ci.yaml)
+[![Build Status](https://img.shields.io/github/workflow/status/stayallive/lighthouse-graphql-hive/ci.yaml?branch=master&style=flat-square)](https://github.com/stayallive/lighthouse-graphql-hive/actions/workflows/ci.yaml)
 [![Total Downloads](https://img.shields.io/packagist/dt/stayallive/lighthouse-graphql-hive.svg?style=flat-square)](https://packagist.org/packages/stayallive/lighthouse-graphql-hive)
 
 [GraphQL Hive](https://graphql-hive.com/) can measure and collect data against all your [GraphQL](https://graphql.org/) operations and generate analytics on them.
