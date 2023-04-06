@@ -17,17 +17,13 @@ class InternalHiveCollectDirective extends BaseDirective implements FieldMiddlew
     ) {
     }
 
-    public function handleField(FieldValue $fieldValue, Closure $next): FieldValue
+    public function handleField(FieldValue $fieldValue): void
     {
-        $resolver = $fieldValue->getResolver();
-
-        $fieldValue->setResolver(function ($root, array $args, GraphQLContext $context, ResolveInfo $resolveInfo) use ($resolver) {
+        $fieldValue->wrapResolver(fn (callable $resolver) => function ($root, array $args, GraphQLContext $context, ResolveInfo $resolveInfo) use ($resolver) {
             $this->collector->collect($resolveInfo);
 
             return $resolver($root, $args, $context, $resolveInfo);
         });
-
-        return $next($fieldValue);
     }
 
     public static function definition(): string
