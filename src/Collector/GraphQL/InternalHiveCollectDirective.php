@@ -2,7 +2,6 @@
 
 namespace Stayallive\Lighthouse\GraphQLHive\Collector\GraphQL;
 
-use Closure;
 use GraphQL\Type\Definition\ResolveInfo;
 use Nuwave\Lighthouse\Schema\Values\FieldValue;
 use Nuwave\Lighthouse\Schema\Directives\BaseDirective;
