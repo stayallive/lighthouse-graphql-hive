@@ -13,8 +13,7 @@ class Job implements ShouldQueue
 
     public function __construct(
         private array $payload,
-    ) {
-    }
+    ) {}
 
     public function handle(Client $client): void
     {

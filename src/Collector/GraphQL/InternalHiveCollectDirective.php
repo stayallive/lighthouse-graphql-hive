@@ -13,8 +13,7 @@ class InternalHiveCollectDirective extends BaseDirective implements FieldMiddlew
 {
     public function __construct(
         private Collector $collector,
-    ) {
-    }
+    ) {}
 
     public function handleField(FieldValue $fieldValue): void
     {

@@ -9,8 +9,7 @@ class Submitter implements SubmitterInterface
 {
     public function __construct(
         private RedisManager $redis,
-    ) {
-    }
+    ) {}
 
     public function submitUsage(array $usage): void
     {

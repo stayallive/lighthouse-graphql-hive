@@ -24,8 +24,7 @@ class Collector
 
     public function __construct(
         private Submitter $submitter,
-    ) {
-    }
+    ) {}
 
     public function handleStartRequest(StartRequest $startRequest): void
     {
