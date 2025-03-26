@@ -18,7 +18,7 @@
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.1",
         "guzzlehttp/guzzle": "^7",
         "laravel/framework": "^10|^11|^12",
         "nuwave/lighthouse": "^6"
