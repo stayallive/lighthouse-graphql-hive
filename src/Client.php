@@ -22,9 +22,7 @@ class Client
         ]);
     }
 
-    /**
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
+    /** @throws \GuzzleHttp\Exception\GuzzleException */
     public function submitUsage(array $usage): ResponseInterface
     {
         return $this->http->post('usage', [

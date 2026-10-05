@@ -34,8 +34,10 @@ class ServiceProvider extends LaravelServiceProvider
         if (self::driver() === RedisSubmitter::class) {
             $this->app->afterResolving(Schedule::class, static function (Schedule $schedule) {
                 $scheduled = $schedule->command(RedisSubmitterCommand::class)
-                                      ->everyMinute()
-                                      ->onOneServer()->runInBackground()->withoutOverlapping();
+                    ->everyMinute()
+                    ->onOneServer()
+                    ->runInBackground()
+                    ->withoutOverlapping();
 
                 $logFilePath = config('logging.scheduled_commands_file');
 

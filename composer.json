@@ -18,9 +18,9 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "guzzlehttp/guzzle": "^7",
-        "laravel/framework": "^10|^11|^12|^13",
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.8|^8",
+        "laravel/framework": "^12|^13",
         "nuwave/lighthouse": "^6"
     },
     "autoload": {
@@ -29,9 +29,9 @@
         }
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.15",
-        "orchestra/testbench": "^8|^9|^10|^11",
-        "phpunit/phpunit": "^10|^11"
+        "chieftools/php-cs-fixer": "1.1.*",
+        "orchestra/testbench": "^10|^11",
+        "phpunit/phpunit": "^11.5|^12|^13"
     },
     "autoload-dev": {
         "psr-4": {
@@ -54,6 +54,9 @@
     "config": {
         "sort-packages": true,
         "preferred-install": "dist",
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "chieftools/php-cs-fixer": true
+        }
     }
 }
